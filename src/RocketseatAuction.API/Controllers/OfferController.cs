@@ -11,9 +11,9 @@ namespace RocketseatAuction.API.Controllers
         [HttpPost]
         [Route("{itemId}")]
         public IActionResult CreateOffer(
-        [FromRoute] int itemId,
-        [FromBody] RequestCreateOfferJson request,
-        [FromServices] CreateOfferUseCase useCase)
+            [FromRoute] int itemId,
+            [FromBody] RequestCreateOfferJson request,
+            [FromServices] CreateOfferUseCase useCase)
         {
             var id = useCase.Execute(itemId, request);
 
